@@ -1,0 +1,47 @@
+<h3>Búsqueda</h3>
+<div id="panelBusqueda">
+	<label for="tituloBuscar">Título</label>
+	<input id="tituloBuscar" ng-model="textoBuscar" />
+	 
+	<button ng-click="listFilter()">Buscar libro</button>
+</div>
+
+
+
+<h3>Listado de libros</h3>
+
+
+<table style="border: black 1px solid;">
+  <tr style="border: black 1px solid;"> 
+    <th><strong>TITULO</strong></th>
+    <th><strong>AUTOR</strong></th>
+    <th></th>
+  </tr>
+  <tr style="border: black 1px solid;" ng-repeat="x in list">
+    <td><a href="/#/{{x.id}}">{{x.titulo}}</a></td>
+    <td>{{x.autor}}</td>
+    <td><button ng-click="eliminarLibro(x)">Eliminar Libro</button></td>
+  </tr>
+</table>
+
+
+<h3>Insertar libro</h3>
+<div>
+    <div>
+        <label for="titulo">Título</label>
+        <input id="titulo" ng-model="form.titulo"/>
+    </div>
+    <div>
+        <label for="autor">Autor</label>
+        <input id="autor" ng-model="form.autor"/>
+    </div>
+    <div>
+        <label for="anioPublicacion">Año publicacion</label>
+        <input id="anioPublicacion" ng-model="form.anioPublicacion"/>
+    </div>
+    <div>
+        <label for="genero">Género</label>
+        <input id="genero" ng-model="form.genero"/>
+    </div>
+    <button ng-click="guardarLibro()">Guardar libro</button>
+</div>
