@@ -93,13 +93,13 @@
 							</apiSources>
 						</configuration>
 						<executions>
-							<!-- <execution> -->
-							<!-- <id>Generate SWAGGER documentation</id> -->
-							<!-- <phase>compile</phase> -->
-							<!-- <goals> -->
-							<!-- <goal>generate</goal> -->
-							<!-- </goals> -->
-							<!-- </execution> -->
+							 <execution> 
+							 <id>Generate SWAGGER documentation</id> 
+							 <phase>compile</phase> 
+							 <goals> 
+							 <goal>generate</goal> 
+							 </goals>
+							 </execution>
 						</executions>
 					</plugin>
 				</plugins>
